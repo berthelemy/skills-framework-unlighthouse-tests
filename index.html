@@ -17,14 +17,13 @@
                 <th>Total score</th>
             </thead>
             <tbody>
+                {%- for test in site.data.tests -%}
                 <tr>
-                    <td><a href="a282/" target="_blank">12/07/2025 16:00</a></td>
-                    <td>100%</td>
+                    <td><a href="{{ test.id }}" target="_blank">{{ test.date }}</a></td>
+                    <td>{{ test.platform }}
+                    <td>{{ test.score }}</td>
                 </tr>
-                <tr>
-                    <td><a href="6f53/" target="_blank">12/07/2025 16:46</a></td>
-                    <td>100%</td>
-                </tr>
+                {%- endfor -%}
             </tbody>
         </table>
         
